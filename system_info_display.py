@@ -16,7 +16,7 @@ __status__ = "Finished"
 
 
 def main():
-    print("=" * 40, "System Information", "=" * 40)
+    print("=" * 30, "System Information", "=" * 30)
     uname = platform.uname()
     print(f"System: {uname.system}")
     print(f"Node Name: {uname.node}")
@@ -24,6 +24,7 @@ def main():
     print(f"Version: {uname.version}")
     print(f"Machine: {uname.machine}")
     print(f"Processor: {uname.processor}")
+
 
 
 if __name__ == '__main__':  # code to execute if called from command-line

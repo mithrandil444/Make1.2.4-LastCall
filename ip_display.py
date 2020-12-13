@@ -16,10 +16,10 @@ __status__ = "Finished"
 
 def main():
         try:
-            hostname = socket.gethostname()
-            hostip = socket.gethostbyname(hostname)
-            print("Hostname:  ", hostname)
-            print("IP Address: ", hostip)
+            host_name = socket.gethostname()
+            host_ip = socket.gethostbyname(host_name)
+            print("Hostname:  ", host_name)
+            print("IP Address: ", host_ip)
         except:
             print("Unable to get Hostname and IP")
 

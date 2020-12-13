@@ -4,7 +4,7 @@ Info about our project comes here
 """
 
 # IMPORTS
-
+import socket
 
 __author__ = "Sven De Visscher"
 __email__ = "sven.devisscher@student.kdg.be"
