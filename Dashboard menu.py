@@ -25,7 +25,7 @@ def dashboard():
     print("4. System info")
     print("5. Update system")
     print("6. Install software")
-    print("8. EXIT")
+    print("7. EXIT")
     print("=" * 30, "End of the Menu", "=" * 24)
 
     keuze = input("Enter choice(1/2/3/4/5/6/8):\n")
@@ -51,17 +51,17 @@ def dashboard():
         dashboard()
 
     elif keuze == '5':
-        subprocess.run('./update_system', shell=True)
-        time.sleep(2)
+        subprocess.run('./update_system', shell=True)   # Update and upgrade your linux system
+        time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran update_system
         dashboard()
 
     elif keuze == '6':
-        subprocess.run('./software', shell=True)
-        time.sleep(2)
+        subprocess.run('./software', shell=True)    # Begins the installation of the software
+        time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran install software
         dashboard()
 
-    elif keuze == '8':
-        print("Tot de volgende")
+    elif keuze == '7':                              # Exit the menu
+        print("Goodbye")                            # Print goodbye
         sys.exit()
 if __name__ == '__main__':  # code to execute if called from command-line
     dashboard()
