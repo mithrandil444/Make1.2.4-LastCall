@@ -5,6 +5,8 @@ This is a python script that displays an option menu of the operations that you 
 
 # IMPORTS
 import rekenmachine, wachtwoord, ip_display, system_info_display, subprocess, time
+import sys
+
 
 __author__ = "Sven De Visscher"
 __email__ = "sven.devisscher@student.kdg.be"
@@ -15,38 +17,51 @@ __status__ = "Development"
 
 
 def dashboard():
+    print("=" * 30, "Main Menu", "=" * 30)
     print("Select operation.")
     print("1. Rekenmachine")
     print("2. Wachtwoord")
     print("3. IP display")
     print("4. System info")
     print("5. Update system")
-    keuze = input("Enter choice(1/2/3/4/5):\n")
+    print("6. Install software")
+    print("8. EXIT")
+    print("=" * 30, "End of the Menu", "=" * 24)
+
+    keuze = input("Enter choice(1/2/3/4/5/6/8):\n")
 
     if keuze == '1':
-        rekenmachine.main()     # Runs the programm rekenmachine
+        rekenmachine.main()     # Runs the program rekenmachine
         time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran the program rekenmachine
         dashboard()
 
     elif keuze == '2':
-        wachtwoord.main()
-        time.sleep(2)
+        wachtwoord.main()       # Runs the program wachtwoord
+        time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran the program wachtwoord
         dashboard()
 
     elif keuze == '3':
-        ip_display.main()
-        time.sleep(2)
+        ip_display.main()       # Runs the program ip_display
+        time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran the program ip_display
         dashboard()
 
     elif keuze =='4':
-        system_info_display.main()
-        time.sleep(2)
+        system_info_display.main()  # Runs the program system_info_display
+        time.sleep(2)           # Waits for 2 seconds to display the main menu after it ran the program system_info
         dashboard()
 
     elif keuze == '5':
-        subprocess.call('./update_system')
+        subprocess.run('./update_system', shell=True)
         time.sleep(2)
         dashboard()
 
+    elif keuze == '6':
+        subprocess.run('./software', shell=True)
+        time.sleep(2)
+        dashboard()
+
+    elif keuze == '8':
+        print("Tot de volgende")
+        sys.exit()
 if __name__ == '__main__':  # code to execute if called from command-line
     dashboard()

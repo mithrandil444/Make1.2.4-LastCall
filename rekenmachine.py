@@ -15,7 +15,7 @@ def optellen(x, y):
         return(x + y)
     except Exception as s:
         print(s)
-        return
+
 
 # Deze functie trekt 2 getallen van elkaar af
 def aftrekken(x, y):
@@ -23,7 +23,7 @@ def aftrekken(x, y):
         return(x - y)
     except Exception as s:
         print(s)
-        return
+
 
 # Deze functie vermenigvuldigt 2 getallen
 def vermenigvuldigen(x, y):
@@ -31,7 +31,7 @@ def vermenigvuldigen(x, y):
         return(x * y)
     except Exception as s:
         print(s)
-        return
+
 
 
 # Deze functie deelt 2 getallen door elkaar
@@ -40,7 +40,7 @@ def delen(x, y):
         return(x / y)
     except Exception as s:
         print(s)
-        return
+
 
 
 
